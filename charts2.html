@@ -1,0 +1,37 @@
+HTTP/1.1 200 200
+Date: Sun, 16 Sep 2018 03:08:12 GMT
+Content-Type: text/html;charset=ISO-8859-1
+Connection: keep-alive
+Server: Apache
+Vary: X-Remote-Client-IP,Accept-Encoding
+Strict-Transport-Security: max-age=31536000; includeSubdomains
+Content-Security-Policy-Report-Only: object-src 'none'; report-uri /suite/rest/a/csp/latest/report;
+Content-Security-Policy: report-uri /suite/rest/a/csp/latest/report;
+X-XSS-Protection: 1; mode=block
+Requested-While-Authenticated: false
+X-Frame-Options: SAMEORIGIN
+
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById('timeline');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+        dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([[''Approve Project'', new Date(2018,09,01), new Date(2018,10,5)],; [[''Shareable dieline and material'', new Date(2018,09,01), new Date(2018,10,5)],; [[''Develop Production Art'', new Date(2018,09,01), new Date(2018,10,5)],; [[''Graphic Review'', new Date(2018,09,01), new Date(2018,10,5)],; [[''Order Production Material'', new Date(2018,09,01), new Date(2018,10,5)],; [[''Start of Shipment'', new Date(2018,09,01), new Date(2018,10,5)]]);
+
+        chart.draw(dataTable);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="timeline" style="width: 900px" style="height: 180px;"></div>
+  </body>
+</html>
